@@ -1,0 +1,73 @@
+C:\Users\Admin\.ssh\id_ed25519
+✅ Why It Worked Without Git Bash
+You pushed from Eclipse, which has built-in Git support (EGit plugin). Here's how it works:
+
+🔧 Eclipse Internally Uses Git
+Eclipse includes the EGit plugin
+
+EGit is a Java-based implementation of Git
+
+It handles Git operations like:
+
+clone
+
+commit
+
+push
+
+pull
+→ All inside Eclipse GUI
+
+✅ SSH Authentication Still Happened
+When you cloned the repo using:
+
+scss
+Copy
+Edit
+git@github.com:NileshPawar98/TestProject.git
+➡️ You used SSH protocol instead of HTTPS.
+
+Earlier, you set up your SSH key and added it to GitHub
+
+When Eclipse did the push, it used your SSH key in the background
+
+Git Bash wasn’t needed, because:
+✅ Eclipse → Java Git (JGit) → uses your SSH key → connects to GitHub → push successful!
+
+🔐 Remember:
+SSH key is stored in:
+
+makefile
+Copy
+Edit
+C:\Users\Admin\.ssh\id_ed25519
+Git (whether used via Bash or Eclipse) uses that key when pushing to git@github.com
+
+🎯 Summary
+Action	Tool Used
+Clone repo	Eclipse Git (EGit)
+Share project	Eclipse Git
+Commit	Eclipse Git
+Push	Eclipse Git (using your SSH key)
+
+👉 Git Bash is optional unless you prefer CLI.
+
+Let me know if you'd like to:
+
+Try pushing from Git Bash
+
+Convert the project to Maven
+
+Set up Selenium or .gitignore
+
+You're using Git like a pro now 🔥
+
+
+
+
+
+
+
+
+
+Ask ChatGPT
